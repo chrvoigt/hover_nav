@@ -1,0 +1,50 @@
+body {
+    font-family: sans-serif;
+    position: relative;
+}
+
+/*
+nav ul li {} würde auch auf die darunterliegenden items vererben, z.B. inline_block
+ */
+
+nav > ul {
+    padding:0;
+}
+
+/* Items: menu 1 & 2 */
+nav > ul > li {
+    position: relative;
+    margin: 0;
+    display: inline-block;
+    padding: 10px;
+    background-color: black;
+    width: 100px;
+    color: white;
+}
+
+/* Untermenuliste */
+nav > ul > li > ul {
+    position: absolute;
+    list-style-type: none;
+    padding: 10px;
+    /* position des gesamten Untermenues */
+    top: 40px;
+    left: 0;
+    margin: 0;
+
+    color: black;
+    background-color: yellow;
+    width: 100px;
+    display: none;
+}
+
+nav > ul > li > ul > li {
+    padding-bottom: 10px;
+}
+
+nav > ul > li:hover > ul {
+    display: block;
+}
+
+
+
